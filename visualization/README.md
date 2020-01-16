@@ -1,5 +1,5 @@
 # Visualization
-Visualize the graph using [networkx](https://networkx.github.io/) and [matplotlib](https://matplotlib.org/)
+Visualize the graph using [networkx](https://networkx.github.io/) and [matplotlib](https://matplotlib.org/).
 
 # Instruction
 Install python3.
