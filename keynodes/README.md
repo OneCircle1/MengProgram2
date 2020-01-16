@@ -24,3 +24,8 @@ The fist colume is the node and the second colume is the pagerank value.
 846601477  0.0009279440
 ```
 
+# TODO
+Visualize the key node in graph.
+
+# Question
+The pagerank value is quite low.
