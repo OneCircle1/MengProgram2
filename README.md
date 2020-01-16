@@ -15,9 +15,9 @@ Finding out the KOL will be useful under many circumstance, such as marketing an
 * Learn to use graphical package, such as networkx, to do visualization.
 
 # Submission
-* Using **networkx**, matplotlib to visualize the data from social newwork company.
-* Using the data above, find out the key nodes using **pagerank**.
-* Using the data above, do community detection using **LPA**.
+* Using [networkx](https://en.wikipedia.org/wiki/NetworkX), matplotlib to visualize the data from social newwork company.
+* Using the data above, find out the key nodes using [pagerank](https://en.wikipedia.org/wiki/Pagerank).
+* Using the data above, do community detection using [LPA](https://en.wikipedia.org/wiki/Label_propagation_algorithm).
 
 # Milestone
 2020.01.16 - 2020.01.22
