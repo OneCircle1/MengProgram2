@@ -7,7 +7,7 @@ Install python3.
 
 Install networkx and matplotlib.
 
-Run visualization.py.
+Run pagerank.py.
 
 # Result
 The fist colume is the node and the second colume is the pagerank value.
