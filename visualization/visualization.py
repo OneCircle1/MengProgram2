@@ -19,3 +19,5 @@ G.remove_nodes_from(remove_list)
 
 nx.draw(G, node_size = 1)
 plt.show()
+
+# plt.savefig("20180321.png")
