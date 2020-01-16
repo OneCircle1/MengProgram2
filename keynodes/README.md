@@ -25,6 +25,7 @@ The fist colume is the node and the second colume is the pagerank value.
 ```
 
 # TODO
+Write the algorithm by myself.
 Visualize the key node in graph.
 
 # Question
