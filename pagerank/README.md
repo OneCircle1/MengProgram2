@@ -1,4 +1,4 @@
-# Find Key Node
+# Page Rank
 Find the key nodes using [pagerank algorithm](https://en.wikipedia.org/wiki/PageRank).
 In [nextworkx document](https://networkx.github.io/documentation/networkx-1.10/reference/generated/networkx.algorithms.link_analysis.pagerank_alg.pagerank.html), pagerank analysis can be used in an easy way. Even though it is an old document, the codes introduced there still works well.
 
