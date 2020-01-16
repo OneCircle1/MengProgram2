@@ -8,6 +8,9 @@ Install networkx and matplotlib.
 
 Run visualization.py.
 
+# Result
+![image](https://github.com/OneCircle1/MengProgram2/blob/master/visualization/20180321.png)
+
 # Question
 
 The code for saving the image doesn't work.
