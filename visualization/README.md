@@ -12,7 +12,7 @@ Run visualization.py.
 # Result
 
 Draw the graph.  
-[image](https://github.com/OneCircle1/MengProgram2/blob/master/visualization/origin.png)
+![image](https://github.com/OneCircle1/MengProgram2/blob/master/visualization/origin.png)
 
 Remove one degree node and draw the graph.
 ![image](https://github.com/OneCircle1/MengProgram2/blob/master/visualization/20180321.png)
