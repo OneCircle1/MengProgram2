@@ -17,6 +17,9 @@ for i in range(len(nodelist)):
     if G.degree[nodelist[i]] <= 10:
         remove_list.append(nodelist[i])
 
+# print(G.number_of_nodes())
+
+
 G.remove_nodes_from(remove_list)
 
 print("number of nodes ",G.number_of_nodes())
