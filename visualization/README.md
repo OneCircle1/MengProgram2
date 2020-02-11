@@ -10,7 +10,6 @@ Install networkx and matplotlib.
 Run visualization.py.
 
 # Result
-
 Draw the graph.  
 ![image](https://github.com/OneCircle1/MengProgram2/blob/master/visualization/origin.png)
 
