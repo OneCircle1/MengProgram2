@@ -33,4 +33,4 @@ The directed graph visualization after reversing the head and tail, where the no
 Write the algorithm using numpy.
 
 # Question
-The pagerank value is quite low.
+How can we make use of pagerank in real life and what's the meaning of this csv file.
