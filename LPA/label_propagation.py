@@ -5,8 +5,6 @@ from networkx.utils import groups
 from networkx.utils import not_implemented_for
 from networkx.utils import py_random_state
 
-__all__ = ['label_propagation_communities', 'asyn_lpa_communities']
-
 
 def asyn_lpa_communities(G, weight=None, seed=None):
 
@@ -41,8 +39,6 @@ def asyn_lpa_communities(G, weight=None, seed=None):
 
     yield from groups(labels).values()
 
-
-@not_implemented_for('directed')
 def label_propagation_communities(G):
     
     coloring = _color_network(G)
