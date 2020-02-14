@@ -1,6 +1,3 @@
-"""
-Label propagation community detection algorithms.
-"""
 from collections import Counter
 
 import networkx as nx
@@ -11,56 +8,7 @@ from networkx.utils import py_random_state
 __all__ = ['label_propagation_communities', 'asyn_lpa_communities']
 
 
-@py_random_state(2)
 def asyn_lpa_communities(G, weight=None, seed=None):
-    """Returns communities in `G` as detected by asynchronous label
-    propagation.
-
-    The asynchronous label propagation algorithm is described in
-    [1]_. The algorithm is probabilistic and the found communities may
-    vary on different executions.
-
-    The algorithm proceeds as follows. After initializing each node with
-    a unique label, the algorithm repeatedly sets the label of a node to
-    be the label that appears most frequently among that nodes
-    neighbors. The algorithm halts when each node has the label that
-    appears most frequently among its neighbors. The algorithm is
-    asynchronous because each node is updated without waiting for
-    updates on the remaining nodes.
-
-    This generalized version of the algorithm in [1]_ accepts edge
-    weights.
-
-    Parameters
-    ----------
-    G : Graph
-
-    weight : string
-        The edge attribute representing the weight of an edge.
-        If None, each edge is assumed to have weight one. In this
-        algorithm, the weight of an edge is used in determining the
-        frequency with which a label appears among the neighbors of a
-        node: a higher weight means the label appears more often.
-
-    seed : integer, random_state, or None (default)
-        Indicator of random number generation state.
-        See :ref:`Randomness<randomness>`.
-
-    Returns
-    -------
-    communities : iterable
-        Iterable of communities given as sets of nodes.
-
-    Notes
-    ------
-    Edge weight attributes must be numerical.
-
-    References
-    ----------
-    .. [1] Raghavan, Usha Nandini, Réka Albert, and Soundar Kumara. "Near
-           linear time algorithm to detect community structures in large-scale
-           networks." Physical Review E 76.3 (2007): 036106.
-    """
 
     labels = {n: i for i, n in enumerate(G)}
     cont = True
@@ -96,34 +44,7 @@ def asyn_lpa_communities(G, weight=None, seed=None):
 
 @not_implemented_for('directed')
 def label_propagation_communities(G):
-    """Generates community sets determined by label propagation
-
-    Finds communities in `G` using a semi-synchronous label propagation
-    method[1]_. This method combines the advantages of both the synchronous
-    and asynchronous models. Not implemented for directed graphs.
-
-    Parameters
-    ----------
-    G : graph
-        An undirected NetworkX graph.
-
-    Yields
-    ------
-    communities : generator
-        Yields sets of the nodes in each community.
-
-    Raises
-    ------
-    NetworkXNotImplemented
-       If the graph is directed
-
-    References
-    ----------
-    .. [1] Cordasco, G., & Gargano, L. (2010, December). Community detection
-       via semi-synchronous label propagation algorithms. In Business
-       Applications of Social Network Analysis (BASNA), 2010 IEEE International
-       Workshop on (pp. 1-8). IEEE.
-    """
+    
     coloring = _color_network(G)
     # Create a unique label for each node in the graph
     labeling = {v: k for k, v in enumerate(G)}
@@ -138,10 +59,7 @@ def label_propagation_communities(G):
 
 
 def _color_network(G):
-    """Colors the network so that neighboring nodes all have distinct colors.
 
-       Returns a dict keyed by color to a set of nodes with that color.
-    """
     coloring = dict()  # color => set(node)
     colors = nx.coloring.greedy_color(G)
     for node, color in colors.items():
@@ -181,15 +99,10 @@ def _most_frequent_labels(node, labeling, G):
 
 
 def _update_label(node, labeling, G):
-    """Updates the label of a node using the Prec-Max tie breaking algorithm
 
-       The algorithm is explained in: 'Community Detection via Semi-Synchronous
-       Label Propagation Algorithms' Cordasco and Gargano, 2011
-    """
     high_labels = _most_frequent_labels(node, labeling, G)
     if len(high_labels) == 1:
         labeling[node] = high_labels.pop()
     elif len(high_labels) > 1:
-        # Prec-Max
         if labeling[node] not in high_labels:
             labeling[node] = max(high_labels)
