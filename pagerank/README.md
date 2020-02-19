@@ -28,7 +28,7 @@ The directed graph visualization after reversing the head and tail, where the no
 ![image](https://github.com/OneCircle1/MengProgram2/blob/master/pagerank/png/sz500r.png)
 
 # TODO
-～～Write the algorithm using numpy.～～
+~~Write the algorithm using numpy.~~
 
 # Question
 How can we make use of pagerank in real life and what's the meaning of this csv file.
