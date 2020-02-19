@@ -39,15 +39,15 @@ def Generate_Transfer_Matrix(G):
                 continue
     return M, node2index, index2node
 
-# with open('/Users/cxy/Downloads/tgh/MengProgram2/pagerank/20180321.csv', mode='r') as infile:
+# with open('20180321.csv', mode='r') as infile:
 #     reader = csv.reader(infile)
-#     with open('/Users/cxy/Downloads/tgh/MengProgram2/pagerank/20180321_new.csv', mode='w') as outfile:
+#     with open('20180321_new.csv', mode='w') as outfile:
 #         writer = csv.writer(outfile)
 #         G = {rows[0]:rows[1] for rows in reader}
 
-with open('/Users/cxy/Downloads/tgh/MengProgram2/pagerank/20180321.csv', mode='r') as infile:
+with open('20180321.csv', mode='r') as infile:
     reader = csv.reader(infile)
-    with open('/Users/cxy/Downloads/tgh/MengProgram2/pagerank/20180321_new.csv', mode='w') as outfile:
+    with open('20180321_new.csv', mode='w') as outfile:
         writer = csv.writer(outfile)
         for rows in reader:
             G.setdefault(rows[1],[]).append(rows[0])
