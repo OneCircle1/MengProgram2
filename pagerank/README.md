@@ -7,7 +7,7 @@ Install python3.
 
 Install networkx and matplotlib.
 
-Run nwkxpgrk.py.
+Run pagerank.py.
 
 # Result
 
