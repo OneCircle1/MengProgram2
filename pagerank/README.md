@@ -10,15 +10,13 @@ Install networkx and matplotlib.
 Run nwkxpgrk.py.
 
 # Result
-The key is the node and the value is the pagerank value. The nodes with top 5 pr value are shown as below.  
+
+The top 10 pr value created by .
 ```
-[(303207760, 0.002064974982357374), (236274321, 0.002051236035584388), (4330660, 0.0017084371041040385), (39819088, 0.0012231166082177169), (11168597, 0.0012083176973727275)]
+[8284 rows x 8284 columns]
+[('275995436', 0.019466309905308385), ('476410313', 0.01946381594026822), ('809524687', 0.01600534103045328), ('390148878', 0.016003042960857406), ('249422639', 0.011717182749134037), ('123570525', 0.009844364953666397), ('947272756', 0.008573799682473652), ('676285306', 0.008572709691425888), ('317866087', 0.005860695552687871), ('272834362', 0.005857889789848505)]
 ```
 
-Since we don't know which colume is the head in the csv file. I reverse the head and tail and calculae the pagerank again. The result is shown as below.  
-```
-[(303207760, 0.002265352213482891), (236274321, 0.002010489006453749), (4330660, 0.0018910901732115167), (11168597, 0.0011830686750502466), (39819088, 0.0011001224081980633)]
-```
 
 The directed graph visualization, where the node size is 1.  
 ![image](https://github.com/OneCircle1/MengProgram2/blob/master/pagerank/png/sz1.png)
@@ -30,7 +28,7 @@ The directed graph visualization after reversing the head and tail, where the no
 ![image](https://github.com/OneCircle1/MengProgram2/blob/master/pagerank/png/sz500r.png)
 
 # TODO
-Write the algorithm using numpy.
+～～Write the algorithm using numpy.～～
 
 # Question
 How can we make use of pagerank in real life and what's the meaning of this csv file.
